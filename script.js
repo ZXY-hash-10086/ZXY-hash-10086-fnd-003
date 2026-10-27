@@ -15,7 +15,7 @@ const ja = {
 
   drama: "好きなドラマ：唐沢寿明さん主演の『白い巨塔』",
 
-  skillsTitle: "このコースで学んだこと（かんたんな順）",
+  skillsTitle: "このコースで学んだこと",
 
   skill1: "HTML：タグでページの形を作る（h1、div、img など）",
 
@@ -66,7 +66,7 @@ const en = {
 
   drama: "Favorite drama: 『白い巨塔』 (starring Toshiaki Karasawa)",
 
-  skillsTitle: "What I learned in this course (easiest first)",
+  skillsTitle: "What I learned in this course",
 
   skill1: "HTML: Building pages with tags (h1, div, img, etc.)",
 

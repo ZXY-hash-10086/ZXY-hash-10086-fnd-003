@@ -12,13 +12,20 @@ body {
   padding: 20px;
 }
 
-/* 言語ボタン */
+/* 言語ボタン*/
 .lang {
+  margin-top: 60px;
   text-align: left;
 }
 
 button {
+  background: none;
+  border: none;
   font-size: 14px;
+  font-family: inherit;
+  color: #6e6e73;
+  cursor: pointer;
+  padding: 4px 6px;
 }
 
 header {
@@ -37,9 +44,19 @@ h1 {
   font-size: 40px;
 }
 
+/* マウスを乗せると白くなる */
+.box {
+  margin-top: 24px;
+  padding: 16px;
+}
+
+.box:hover {
+  background-color: white;
+}
+
 h2 {
   font-size: 18px;
-  margin-top: 40px;
+  margin-top: 0;
   padding-bottom: 4px;
   border-bottom: 1px solid #d2d2d7;
 }
@@ -48,8 +65,20 @@ ul {
   padding-left: 20px;
 }
 
+/* エラーの行 */
+#weak-2 {
+  cursor: pointer;
+}
+
+/* うそのエラー */
+#error-demo {
+  color: #d70015;
+  font-family: monospace;
+}
+
 footer {
-  margin-top: 60px;
+  margin-top: 20px;
   font-size: 12px;
   color: #6e6e73;
+  cursor: pointer;
 }

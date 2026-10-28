@@ -35,6 +35,12 @@ const ja = {
 
   skill9: "JS：JS で HTML を動かす（getElementById、addEventListener など）",
 
+  noteHtml: "HTML：ページの骨組み（どこに何を置くか）を作ります。",
+
+  noteCss: "CSS：ページの見た目（色、文字、余白）を整えます。",
+
+  noteJs: "JS：ボタンを押したときなど、ページに動きをつけます。",
+
   growthTitle: "やってみて思ったこと",
 
   growth:
@@ -51,6 +57,8 @@ const ja = {
   nextTitle: "これから",
 
   next: "たくさん練習して、早く JS と HTML に慣れたいです。そして、Web アプリの構造や function を読めるようになりたいです。",
+
+  thanks: "ご清聴ありがとうございました！",
 };
 
 const en = {
@@ -87,6 +95,12 @@ const en = {
   skill9:
     "JS: Controlling HTML with JS (getElementById, addEventListener, etc.)",
 
+  noteHtml: "HTML builds the structure of the page (what goes where).",
+
+  noteCss: "CSS styles the page (colors, fonts, spacing).",
+
+  noteJs: "JS makes the page move, like when you click a button.",
+
   growthTitle: "What I noticed",
 
   growth:
@@ -103,6 +117,8 @@ const en = {
   nextTitle: "Next",
 
   next: "I want to practice a lot and get used to JS and HTML soon. Then I want to be able to read the structure and functions of a web app.",
+
+  thanks: "Thank you for listening!",
 };
 
 const render = () => {
@@ -146,6 +162,14 @@ const render = () => {
 
   document.getElementById("skill-9").textContent = t.skill9;
 
+  document.getElementById("skill-note").textContent = "";
+
+  document.getElementById("list-html").style.display = "block";
+
+  document.getElementById("list-css").style.display = "block";
+
+  document.getElementById("list-js").style.display = "block";
+
   document.getElementById("growth-title").textContent = t.growthTitle;
 
   document.getElementById("growth-text").textContent = t.growth;
@@ -157,6 +181,8 @@ const render = () => {
   document.getElementById("weak-1").textContent = t.weak1;
 
   document.getElementById("weak-2").textContent = t.weak2;
+
+  document.getElementById("error-demo").textContent = "";
 
   document.getElementById("next-title").textContent = t.nextTitle;
 
@@ -177,6 +203,89 @@ document.getElementById("btn-en").addEventListener("click", () => {
   lang = "en";
 
   render();
+});
+
+// ALL ボタン
+
+document.getElementById("btn-all").addEventListener("click", () => {
+  document.getElementById("list-html").style.display = "block";
+
+  document.getElementById("list-css").style.display = "block";
+
+  document.getElementById("list-js").style.display = "block";
+
+  document.getElementById("skill-note").textContent = "";
+});
+
+// HTML ボタン
+
+document.getElementById("btn-html").addEventListener("click", () => {
+  document.getElementById("list-html").style.display = "block";
+
+  document.getElementById("list-css").style.display = "none";
+
+  document.getElementById("list-js").style.display = "none";
+
+  if (lang === "ja") {
+    document.getElementById("skill-note").textContent = ja.noteHtml;
+  } else {
+    document.getElementById("skill-note").textContent = en.noteHtml;
+  }
+});
+
+// CSS ボタン
+
+document.getElementById("btn-css").addEventListener("click", () => {
+  document.getElementById("list-html").style.display = "none";
+
+  document.getElementById("list-css").style.display = "block";
+
+  document.getElementById("list-js").style.display = "none";
+
+  if (lang === "ja") {
+    document.getElementById("skill-note").textContent = ja.noteCss;
+  } else {
+    document.getElementById("skill-note").textContent = en.noteCss;
+  }
+});
+
+// JS ボタン
+
+document.getElementById("btn-js").addEventListener("click", () => {
+  document.getElementById("list-html").style.display = "none";
+
+  document.getElementById("list-css").style.display = "none";
+
+  document.getElementById("list-js").style.display = "block";
+
+  if (lang === "ja") {
+    document.getElementById("skill-note").textContent = ja.noteJs;
+  } else {
+    document.getElementById("skill-note").textContent = en.noteJs;
+  }
+});
+
+// エラーの行
+
+document.getElementById("weak-2").addEventListener("click", () => {
+  document.getElementById("error-demo").textContent =
+    "Uncaught ReferenceError: lang is not defined";
+});
+
+//ZXYを押す
+
+document.getElementById("footer").addEventListener("click", () => {
+  document.getElementById("footer").style.textAlign = "center";
+
+  document.getElementById("footer").style.fontSize = "32px";
+
+  document.getElementById("footer").style.color = "#0071e3";
+
+  if (lang === "ja") {
+    document.getElementById("footer").textContent = ja.thanks;
+  } else {
+    document.getElementById("footer").textContent = en.thanks;
+  }
 });
 
 render();

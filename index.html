@@ -8,17 +8,12 @@
 </head>
 <body>
   <div class="page">
-    <div class="lang">
-      <button id="btn-ja">日本語</button>
-      <button id="btn-en">English</button>
-    </div>
-
     <header>
       <p id="hello"></p>
       <h1 id="name"></h1>
     </header>
 
-    <div>
+    <div class="box">
       <h2 id="about-title"></h2>
       <ul>
         <li id="about-from"></li>
@@ -27,12 +22,21 @@
       </ul>
     </div>
 
-    <div>
+    <div class="box">
       <h2 id="skills-title"></h2>
-      <ul>
+      <button id="btn-all">ALL</button>
+      <button id="btn-html">HTML</button>
+      <button id="btn-css">CSS</button>
+      <button id="btn-js">JS</button>
+      <p id="skill-note"></p>
+      <ul id="list-html">
         <li id="skill-1"></li>
+      </ul>
+      <ul id="list-css">
         <li id="skill-2"></li>
         <li id="skill-3"></li>
+      </ul>
+      <ul id="list-js">
         <li id="skill-4"></li>
         <li id="skill-5"></li>
         <li id="skill-6"></li>
@@ -42,26 +46,32 @@
       </ul>
     </div>
 
-    <div>
+    <div class="box">
       <h2 id="growth-title"></h2>
       <p id="growth-text"></p>
     </div>
 
-    <div>
+    <div class="box">
       <h2 id="weak-title"></h2>
       <p id="weak-lead"></p>
       <ul>
         <li id="weak-1"></li>
         <li id="weak-2"></li>
       </ul>
+      <p id="error-demo"></p>
     </div>
 
-    <div>
+    <div class="box">
       <h2 id="next-title"></h2>
       <p id="next-text"></p>
     </div>
 
-    <footer>ZXY</footer>
+    <div class="lang">
+      <button id="btn-ja">日本語</button>
+      <button id="btn-en">English</button>
+    </div>
+
+    <footer id="footer">ZXY</footer>
   </div>
 
   <script src="script.js"></script>
